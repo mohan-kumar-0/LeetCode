@@ -11,6 +11,7 @@ class MinStack {
 
 public:
     MinStack() {
+        std::ios::sync_with_stdio(false);
         idx=-1;
     }
     
