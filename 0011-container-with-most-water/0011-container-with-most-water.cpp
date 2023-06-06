@@ -13,6 +13,9 @@ class Solution {
     }
 public:
     int maxArea(vector<int>& height) {
+        ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+        cout.tie(NULL);
         l=0,r=height.size()-1;
         area = -1;
         while(l<r){
