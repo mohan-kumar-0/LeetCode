@@ -15,7 +15,7 @@ public:
             return (ceil((1.0*piles[0])/h));
         for(int i=0;i<n;++i)
             r = max(r,piles[i]);
-        r*=2;
+        r+=1;
         while(l<r){
             mid = l + (r-l)/2;
             if(time(piles,mid)<=h){
@@ -24,10 +24,7 @@ public:
             }
             else
                 l = mid + 1;
-            //cout<<mid<<" ";
         }
-        //while(time(piles,ans-1)<=h)
-          //  --ans;
         return ans;
     }
 };
