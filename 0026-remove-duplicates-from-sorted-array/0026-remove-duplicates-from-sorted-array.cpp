@@ -5,6 +5,8 @@ public:
         cin.tie(NULL); cout.tie(NULL);
         if(nums.size()==0)
             return 1;
+        else if(nums.size()==2 && nums[0]!=nums[1])
+            return 2;
         int i=0,j=0;
         int n = nums.size();
         while(j<n){
