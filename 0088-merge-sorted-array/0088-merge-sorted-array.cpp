@@ -1,6 +1,8 @@
 class Solution {
 public:
     void merge(vector<int>& nums1, int n, vector<int>& nums2, int m) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
         int tp;
         int i,j,k;
         i = n-1;
