@@ -4,6 +4,8 @@ public:
         int n = nums.size();
         if(n==1)
             return true;
+        if(nums[0]==0)
+            return false;
         bool canBeVisited[10000];
         for(int i=1;i<n;++i)
             canBeVisited[i] = false;
