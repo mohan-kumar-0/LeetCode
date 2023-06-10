@@ -1,8 +1,8 @@
 class Solution {
+    int dp[10000],n;
 public:
     int jump(vector<int>& nums) {
-        int dp[10000];
-        int n = nums.size();
+        n = nums.size();
         for(int i=0;i<n;++i)
             dp[i] = 99999;
         dp[0] = 0;
