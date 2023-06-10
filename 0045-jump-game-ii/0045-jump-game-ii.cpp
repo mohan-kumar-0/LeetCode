@@ -2,6 +2,9 @@ class Solution {
     int dp[10000],n;
 public:
     int jump(vector<int>& nums) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
         n = nums.size();
         for(int i=0;i<n;++i)
             dp[i] = 99999;
