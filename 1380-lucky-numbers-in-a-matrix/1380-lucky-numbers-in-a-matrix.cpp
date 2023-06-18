@@ -4,6 +4,8 @@ class Solution {
     int currElement;
 public:
     vector<int> luckyNumbers (vector<vector<int>>& matrix) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
         vector<int> res;
         n = matrix.size();
         m = matrix[0].size();
