@@ -2,11 +2,12 @@ class Solution {
     int minRow[50],  maxCol[50];
     int n,m;
     int currElement;
+    vector<int> res;
 public:
     vector<int> luckyNumbers (vector<vector<int>>& matrix) {
         ios_base::sync_with_stdio(false);
         cin.tie(NULL); cout.tie(NULL);
-        vector<int> res;
+        res.clear();
         n = matrix.size();
         m = matrix[0].size();
         for(int i=0;i<n;++i)
