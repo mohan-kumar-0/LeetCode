@@ -11,7 +11,7 @@ public:
             return nums;
 
         for(int a=0;a<k;a++)
-            ans.push_back(-1);
+            ans.emplace_back(-1);
       
         long long sum=0;
         for(int a=i;a<=j;a++)
@@ -19,14 +19,14 @@ public:
         
         while(j<n && i<n){
             int avg=sum/(2*k+1);
-            ans.push_back(avg);
+            ans.emplace_back(avg);
             sum-=nums[i];
             i++;
             j++;
             if(j<n)sum+=nums[j]; 
         }
         for(int a=0;a<k;a++)
-            ans.push_back(-1);
+            ans.emplace_back(-1);
         return ans;
     }
 };
