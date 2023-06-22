@@ -17,7 +17,7 @@ public:
         ListNode* newHead = head;
         while(head->next){
             tp = head->next;
-            head->next = head->next->next;
+            head->next = tp->next;
             tp->next = newHead;
             newHead = tp;
         }
