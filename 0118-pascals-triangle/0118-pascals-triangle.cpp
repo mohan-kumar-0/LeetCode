@@ -3,9 +3,7 @@ class Solution {
     vector<vector<int>> Triangle;
 public:
     
-    Solution(){
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL); cout.tie(NULL);  
+    Solution(){  
         Triangle.push_back({1});
         Triangle.push_back({1,1});
         for(int i=1;i<30;++i){
