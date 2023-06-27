@@ -1,6 +1,7 @@
 class Solution {
     bool preprocessed;
     vector<vector<int>> Triangle;
+    vector<vector<vector<int>>> res;
 public:
     
     Solution(){  
@@ -14,12 +15,16 @@ public:
             row.push_back(1);
             Triangle.push_back(row);
         }
+        res.push_back({{1}});
+        for(int i=1;i<31;++i){
+            vector<vector<int>> curr;
+            for(int ii=0;ii<i;++ii)
+                curr.push_back(Triangle[ii]);
+            res.push_back(curr);
+        }
     }
     
     vector<vector<int>> generate(int numRows) {
-        vector<vector<int>> res;
-        for(int i=0;i<numRows;++i)
-            res.push_back(Triangle[i]);
-        return res;
+        return res[numRows];
     }
 };
