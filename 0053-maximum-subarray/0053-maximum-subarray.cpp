@@ -4,7 +4,7 @@ public:
         int maxSum = nums[0];
         int sumSoFar = 0;
         for(int num: nums){
-            sumSoFar+=num;
+            sumSoFar = sumSoFar + num;
             if(num>sumSoFar)
                 sumSoFar = num;
             if(sumSoFar>maxSum)
