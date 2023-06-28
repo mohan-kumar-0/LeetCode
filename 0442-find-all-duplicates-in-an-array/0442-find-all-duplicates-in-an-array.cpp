@@ -8,7 +8,7 @@ public:
             ++ctr[num];
         for(int i=0;i<=n;++i)
             if(ctr[i]==2)
-                res.push_back(i);
+                res.emplace_back(i);
         return res;
     }
 };
