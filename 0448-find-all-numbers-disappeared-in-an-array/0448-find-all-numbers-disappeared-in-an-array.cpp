@@ -10,7 +10,7 @@ public:
             res[num] = false;
         for(int i=1;i<(n+1);++i)
             if(res[i])
-                ans.push_back(i);
+                ans.emplace_back(i);
         return ans;
     }
 };
