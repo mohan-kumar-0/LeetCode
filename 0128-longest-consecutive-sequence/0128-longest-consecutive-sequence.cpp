@@ -1,27 +1,27 @@
 class Solution {
 public:
-    int max(int& a, int& b){
-        if(a>b)
-            return a;
-        return b;
-    }
-
     int longestConsecutive(vector<int>& nums) {
-        ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-        if(nums.size()==0)
-            return 0;
-        sort(nums.begin(),nums.end());
+        set<int> s;
         int ans = 0;
-        int tp = 1;
-        for(int i=1;i<nums.size();++i)
-            if((nums[i-1]+1)==nums[i])
-                ++tp;
-            else if(nums[i-1]!=nums[i]){
-                ans = max(ans,tp);
-                tp = 1;
+        int nextNum;
+        int num;
+        unordered_map<int,vector<int>> mp;
+        for(int num: nums)
+            s.insert(num);
+        for(auto num: s)
+            if(s.find(num-1)==s.end())
+                mp[num] = {num};
+        for(auto itr: mp){
+            num = itr.first;
+            nextNum = num + 1;
+            while(s.find(nextNum)!=s.end()){
+                mp[num].push_back(nextNum);
+                ++nextNum;
             }
-        return max(tp,ans);
+        }
+        for(auto itr: mp)
+            if(ans<itr.second.size())
+                ans = itr.second.size();
+        return ans;
     }
 };
