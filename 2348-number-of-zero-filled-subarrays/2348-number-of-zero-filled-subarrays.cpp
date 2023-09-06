@@ -16,7 +16,7 @@ public:
         if(ctr)
             contiguousZeroes.push_back(ctr);
         long long ans = 0;
-        for(long long x: contiguousZeroes)
+        for(long x: contiguousZeroes)
             ans += (x*(x+1))/2;
         return ans;
     }
