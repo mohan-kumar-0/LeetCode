@@ -1,8 +1,7 @@
 class Solution {
 public:
     int minimumRounds(vector<int>& tasks) {
-        map<int,int> ctr;
-        int tp;
+        unordered_map<int,int> ctr;
         for(int task: tasks)
             ++ctr[task];
         int ans = 0;
@@ -10,9 +9,8 @@ public:
             if(x.second==1)
                 return -1;
             else{
-                tp = x.second;
-                ans += tp/3;
-                ans+=tp%3!=0?1:0;
+                ans += x.second/3;
+                ans += x.second%3!=0;
             }
         return ans;
     }
