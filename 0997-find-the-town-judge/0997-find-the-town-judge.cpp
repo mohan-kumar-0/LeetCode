@@ -7,7 +7,7 @@ public:
     }
     
     int findJudge(int n, vector<vector<int>>& trust) {
-        int trustCount[1001] = {0};
+        short trustCount[1001] = {0};
         int size = trust.size();
         for(int i=0;i<size;++i){
             ++trustCount[trust[i][1]];
