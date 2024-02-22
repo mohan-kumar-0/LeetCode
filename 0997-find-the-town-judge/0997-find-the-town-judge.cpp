@@ -14,10 +14,6 @@ public:
             ++trustCount[trust[i][1]];
             --trustCount[trust[i][0]];
         }
-        // for(int i=1;i<=n;++i)
-        //     cout<<trusts[i]<<"\t"; cout<<"\n";
-        // for(int i=1;i<=n;++i)
-        //     cout<<trustedBy[i]<<"\t";
         for(int i=1;i<=n;++i)
             if(trustCount[i]==(n-1))
                 judge = i;
