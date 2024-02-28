@@ -1,6 +1,6 @@
 class DetectSquares {
 public:
-    unordered_map<int, unordered_map<int, int>> umap;
+    unordered_map<short, unordered_map<short, short>> umap;
     DetectSquares() {
         ios_base::sync_with_stdio(false);
         cin.tie(NULL);
