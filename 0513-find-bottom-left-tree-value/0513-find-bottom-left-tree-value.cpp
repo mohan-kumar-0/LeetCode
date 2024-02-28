@@ -11,6 +11,11 @@
  */
 class Solution {
 public:
+    Solution() {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL); cout.tie(NULL);
+    }
+    
     int findBottomLeftValue(TreeNode* root) {
         queue<pair<TreeNode*,int>> currLevel;
         currLevel.push({root,0});
