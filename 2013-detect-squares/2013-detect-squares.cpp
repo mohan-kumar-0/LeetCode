@@ -2,7 +2,9 @@ class DetectSquares {
 public:
     unordered_map<int, unordered_map<int, int>> umap;
     DetectSquares() {
-        
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
     }
     
     void add(vector<int> point) {
