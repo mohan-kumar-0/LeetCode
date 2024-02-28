@@ -12,9 +12,8 @@ public:
     }
     
     int count(vector<int> point) {
-        auto& xp = umap[point[0]];
         int ans=0;
-        for(auto &it: xp)
+        for(auto &it: umap[point[0]])
         {
             int dist = abs(it.first - point[1]);
             if(dist==0) continue;
