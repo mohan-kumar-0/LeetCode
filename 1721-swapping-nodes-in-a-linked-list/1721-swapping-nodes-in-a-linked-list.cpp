@@ -10,11 +10,11 @@
  */
 class Solution {
 public:
-    Solution(){
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL);
-        cout.tie(NULL);
-    }
+    // Solution(){
+    //     ios_base::sync_with_stdio(false);
+    //     cin.tie(NULL);
+    //     cout.tie(NULL);
+    // }
         
     ListNode* swapNodes(ListNode* head, int k) {
         int ctr = 0;
