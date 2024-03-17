@@ -1,5 +1,10 @@
 class Solution {
 public:
+    Solution(){
+        ios_base::sync_with_stdio(false);
+        cin.tie(0);
+        cout.tie(0);
+    }
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
         intervals.push_back(newInterval);
         sort(intervals.begin(),intervals.end());
