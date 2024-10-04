@@ -19,7 +19,11 @@ public:
                 else
                     --right;
             }
+            while((i+1)<n && nums[i+1]==nums[i])
+                ++i;
         }
-        return vector<vector<int>>(st.begin(),st.end());
+        for(auto x: st)
+            ans.push_back(x);
+        return ans;
     }
 };
