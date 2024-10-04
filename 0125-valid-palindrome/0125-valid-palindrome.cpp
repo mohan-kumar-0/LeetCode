@@ -1,21 +1,35 @@
 class Solution {
 public:
-    string transform(string s){
-        string res = "";
-        char ch;
-        for(int i=0;s[i];++i){
-            ch = tolower(s[i]);
-            if(isalnum(ch))
-                res+=ch;
-        }
-        return res;
-    }
     bool isPalindrome(string s) {
-        s = transform(s);
-        int i=0,j=s.size()-1;
-        while(i<j)
-            if(s[i++]!=s[j--])
+        int left = 0;
+        int right = s.length()-1;
+        int size = s.length();
+        while(left<size && 0==iswalnum(s[left]))
+            ++left;
+        
+        while(right>=left && !iswalnum(s[right]))
+            --right;
+        
+        while(left<right) {
+            
+            if(tolower(s[left])!=tolower(s[right]))
                 return false;
+            
+            left++;
+            right--;
+            
+            while(left<size && 0==iswalnum(s[left]))
+                ++left;
+
+            while(right>=left && !iswalnum(s[right]))
+                --right;
+        }
+        
+        /*
+        #@$$@% w$#%$# fdst45 34 25erw @#$%@$%
+        
+        */
+        
         return true;
     }
 };
