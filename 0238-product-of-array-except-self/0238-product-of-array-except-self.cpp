@@ -1,20 +1,37 @@
+auto init = [](){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    return 0;
+}();
+
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        int leftProd[100000];
-        int rightProd[100000];
+        int zeroes = 0;
+        for(int n: nums)
+            zeroes+=n==0;
+        int prod = 1;
+        if(zeroes>1){
+            vector<int> ans(nums.size(),0);
+            return ans;
+        }
+        else if(zeroes==1) {
+            vector<int> ans(nums.size(),0);
+            int idx;
+            for(int i=0; i<nums.size(); ++i)
+                if(nums[i]!=0)
+                    prod*=nums[i];
+                else 
+                    idx = i;
+            ans[idx] = prod;
+            return ans;
+        }
         vector<int> ans;
-        int n = nums.size();
-        leftProd[0] = nums[0];
-        rightProd[n-1] = nums[n-1];
-        for(int i=1;i<n;i++)
-            leftProd[i] = leftProd[i-1]*nums[i];
-        for(int i=n-2;i>=0;--i)
-            rightProd[i] = rightProd[i+1]*nums[i];
-        ans.push_back(rightProd[1]);
-        for(int i=1;i<(n-1);++i)
-            ans.push_back(leftProd[i-1]*rightProd[i+1]);
-        ans.push_back(leftProd[n-2]);
+        for(int n: nums)
+            prod*=n;
+        for(int i=0; i<nums.size(); ++i)
+            ans.push_back(prod/nums[i]);
         return ans;
     }
 };
