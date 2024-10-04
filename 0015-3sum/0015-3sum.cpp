@@ -5,7 +5,6 @@ public:
         set<vector<int>> st;
         sort(nums.begin(),nums.end());
         int n = nums.size();
-        // cout<<"New TC \n\n";
         for(int i=0;i<n-2;++i){
             int left = i+1;
             int right = n-1;
@@ -21,8 +20,6 @@ public:
                     --right;
             }
         }
-        for(auto x: st)
-            ans.push_back(x);
-        return ans;
+        return vector<vector<int>>(st.begin(),st.end());
     }
 };
